@@ -84,16 +84,14 @@
 
   .hero-container {
     position: relative;
-
+    display: flex;
+    transition-duration: 300ms;
   }
 }
 
 // Header styles
 
 .header {
-  position: absolute;
-  width: 100%;
-  z-index: 100;
   background-color: white;
 
   &__sign-up {
@@ -193,25 +191,14 @@
 
 .main {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 // Hero section styles
 
 .hero-section {
   margin-block-end: 24px;
-  opacity: 0;
-  display: none;
-  transition-duration:  300ms;
-  padding-block-start: 196px;
-
-  @include on-tablet {
-    padding-block-start: 154px;
-  }
-
-  &:target {
-    opacity: 1;
-    display: block;
-  }
+  flex: 0 0 100%;
 
   &__content {
 
@@ -268,7 +255,7 @@
 // marquee section styles
 
 .marquee-section {
-  padding-block: clamp(100px, 200px ,12vw);
+  padding-block: clamp(100px, 12vw , 300px);
   width: 100vw;
   overflow: hidden;
   position: relative;

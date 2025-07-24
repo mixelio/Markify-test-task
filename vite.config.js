@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: "/markify-test-task/",
+    base: "/Markify-test-task/",
     server: {
         watch: {
             usePolling: true,
         },
     },
-});
+});4
