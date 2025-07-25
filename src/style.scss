@@ -255,7 +255,7 @@
 // marquee section styles
 
 .marquee-section {
-  padding-block: clamp(100px, 12vw , 300px);
+  padding-block: clamp(100px, 6vw , 300px);
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -273,12 +273,20 @@
       background-color: $main-color;
       rotate: 8deg;
       z-index: 2;
+
+      @include on-tablet {
+        rotate: 4deg;
+      }
     }
 
     &--yellow {
       background-color: $secondary-color;
       rotate: -8deg;
       z-index: 1;
+
+        @include on-tablet {
+            rotate: -4deg;
+        }
     }
   }
 
@@ -385,7 +393,7 @@
   }
 
   &__contact-info {
-    h3 {
+    h2 {
       font-family: "Exo", sans-serif;
       font-weight: bold;
       font-size: 14px;
