@@ -1,4 +1,4 @@
-# Markify <img src="./public/vite.svg" />
+# Markify <img src="./public/favicon.svg" />
 
 ## Тестове завдання від Galaktica
 
