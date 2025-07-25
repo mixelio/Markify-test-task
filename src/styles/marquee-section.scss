@@ -1,0 +1,60 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.marquee-section {
+  padding-block: clamp(100px, 6vw , 300px);
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+
+  &__wrapper {
+    padding-block: 16px;
+    width: max-content;
+    will-change: transform;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    &--purple {
+      background-color: $main-color;
+      rotate: 8deg;
+      z-index: 2;
+
+      @include on-tablet {
+        rotate: 4deg;
+      }
+    }
+
+    &--yellow {
+      background-color: $secondary-color;
+      rotate: -8deg;
+      z-index: 1;
+
+      @include on-tablet {
+        rotate: -4deg;
+      }
+    }
+  }
+
+  &__inner {
+    width: max-content;
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+
+    animation: scroll-left 5s infinite linear;
+
+  }
+
+  &__item {
+    flex: 0 0 5%;
+    padding-inline: 8px;
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

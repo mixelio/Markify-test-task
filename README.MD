@@ -22,7 +22,7 @@
 ## Запуск проєкту
 1. Клонуйте репозиторій:
    ```bash
-   git clone
+   git clone https://github.com/mixelio/Markify-test-task.git
    ```
    
 2. Встановіть залежності:
@@ -32,12 +32,12 @@
    
 3. Запустіть локальний сервер:
    ```bash
-   vite
+   npm run dev
    ```
    
 4. Відкрийте браузер і перейдіть за адресою:
    ```
-   http://localhost:5173/
+    http://localhost:5173/Markify-test-task
    ```
    
 ## Виконавець

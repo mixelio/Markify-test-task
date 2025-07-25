@@ -1,0 +1,64 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.hero-section {
+  margin-block-end: 24px;
+  flex: 0 0 100%;
+
+  &__content {
+
+    @include on-tablet {
+      display: flex;
+      gap: clamp(56px, 8vw, 110px);
+    }
+
+    &--reverse {
+      @include on-tablet {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__block {
+    @include on-tablet {
+      &:first-child {
+        min-width: 40%;
+      }
+    }
+  }
+
+  &__image-block {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__info-block {
+
+    @include on-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .title {
+      margin-block-end: 24px;
+    }
+
+    p {
+      line-height: 150%;
+      color: $description-color
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  transition-duration: 300ms;
+}
